@@ -1,0 +1,18 @@
+body {
+	margin:0; padding:0;
+	overflow:hidden;
+  background-color: black;
+}
+
+#target_url { background-color: #111; padding: 2px; color: #555; font-size: 150%;}
+#frame { width:100%; height:700px; }
+
+.shadow   { -moz-box-shadow:inset 0 0 10px #000000; -webkit-box-shadow:inset 0 0 10px #000000; box-shadow:inset 0 0 10px #000000; }
+.rounded  { -moz-border-radius: 9px; border-radius: 9px; }
+
+#flash { 
+  display: none; position: absolute; margin:auto; top: 0px; right: 0px; left: 0px;
+  text-align: center; padding: 10px; font-weight: bolder; font-size: 1.5em;
+  width: 400px; 
+  background-color: yellow; border: 1px solid gray;
+}

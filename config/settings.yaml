@@ -1,0 +1,3 @@
+debug: false
+server_port: 5020
+page_refresh_timer: 20   # seconds to wait before requesting a new page
