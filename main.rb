@@ -12,8 +12,8 @@ LOCAL_IP            = Utilities.local_ip    # IP Address of the server
 
 CONFIG              = YAML.load_file("config/settings.yaml")
 DEBUG               = CONFIG["debug"]
-SERVER_PORT         = CONFIG["server_port"]
 PAGE_REFRESH_TIMER  = CONFIG["page_refresh_timer"]
+SERVER_PORT         = ENV['PORT']
 
 # Define the logger
 LOG = Logger.new STDOUT #("./log/devwall.log", "daily")
@@ -30,6 +30,7 @@ EventMachine.run do
     set :public_folder, "public"
     set :views,  "views"
     set :environment, DEBUG ? :development : :production
+    set :port, SERVER_PORT 
       
     # Set the WebSocket server URL
     before do
@@ -74,5 +75,5 @@ EventMachine.run do
 
   # You could also use Rainbows! instead of Thin.
   # Any EM based Rack handler should do.
-  App.run!({:port => SERVER_PORT})
+  App.run!
 end
