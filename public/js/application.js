@@ -11,9 +11,6 @@ $(function(){
   SERVER_PORT   = $('meta[name=server-port]').attr("content");
   WS_SERVER_URL = $('meta[name=ws-server-url]').attr("content");
 
-  // prevent busting out of the frame
-  ignore_next_redirect();
-
   // console.log safety
   if(!window.console){
     console = {
