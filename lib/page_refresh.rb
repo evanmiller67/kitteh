@@ -18,9 +18,11 @@ module PageRefresh
     site = site.sub("{x}", "#{700+rand(500)}").sub("{y}", "#{400+rand(300)}")
 
     LOG.info "Sending URL '#{site}' to browsers"
-    channel << site.force_encoding('UTF-8') # Some of the URLs have non-UTF encodings (i.e. German)
+    channel << site.force_encoding('UTF-8')
   end
 
+  # Get pictures from reddit!
+  # This should probably be cleaned up with some error handling
   def self.get_urls
     result = Net::HTTP.get(URI.parse('http://www.reddit.com/r/aww.json'))
     parsed = JSON.parse(result)
