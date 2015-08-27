@@ -9,8 +9,19 @@ module PageRefresh
     @aww ||= []
     @aww = get_urls if @aww.count <= 0
     sites = ["http://placekitten.com/{x}/{y}", 
-             "http://placepuppy.it/{x}/{y}", 
-             "http://lorempixel.com/{x}/{y}/animals",
+             "http://lorempixel.com/{x}/{y}",
+             "https://placeimg.com/{x}/{y}/animals",
+             "http://place-hoff.com/{x}/{y}",
+             "http://beerhold.it/{x}/{y}",
+             "http://xoart.link/{x}/{y}/puppy",
+             "http://xoart.link/{x}/{y}/kitten",
+             "http://loremflickr.com/{x}/{y}/kitten",
+             "http://loremflickr.com/{x}/{y}/puppy",
+             "http://pipsum.com/{x}x{y}.jpg",
+             "http://www.fillmurray.com/{x}/{y}",
+             "http://www.placecage.com/{x}/{y}",
+             "http://www.nicenicejpg.com/{x}/{y}",
+             "http://baconmockup.com/{x}/{y}/",
              "awww"]
     site = sites.sample
 

@@ -1,0 +1,7 @@
+.ruby-version
+.ruby-gemset
+.rvmrc
+/.bundle
+tmp/*
+*.swp
+.DS_Store
